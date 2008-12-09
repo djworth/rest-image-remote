@@ -1,0 +1,5 @@
+This app was inspired by [this](http://www.scripting.com/stories/2008/11/30/fractionalHorsepowerImagem.html) post by [Dave Winer](http://www.scripting.com).
+
+Dave was looking for an XML-RPC service but it was much easier for me to create an simple RESTful service that either returns an JSON object with the image base64'd or just stream the image back in the request. 
+
+The application is hosted on [Google App Engine](http://code.google.com/appengine/). Since this is a GAE application I'm using the [Image API](http://code.google.com/appengine/docs/images/usingimages.html) provided by [Google](http://www.google.com) instead of [ImageMagick](http://www.imagemagick.com) and/or [GraphicsMagick](http://www.graphicsmagick.org)
