@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>About</h2>
+<p>This app was inspired by <a href="http://www.scripting.com/stories/2008/11/30/fractionalHorsepowerImagem.html">this</a> post by <a href="http://www.scripting.com">Dave Winer</a>.  Dave was looking for an XML-RPC service but it was much easier for me to create an simple RESTful service that either returns an JSON object with the image base64'd or just stream the image back in the request.  The application is hosted on Google App Engine.  Since this is an GAE application I'm using the Image API provided by Google instead of <a href="http://www.imagemagick.org/script/index.php">ImageMagick</a> and/or <a href="http://www.graphicsmagick.org/">GraphicsMagick</a> </p>
+
+<p>BTW - I ripped off the styles for this site from the <a href="http://www.djangoproject.com">Django</a> Admin stylesheet</p>
+{% endblock %}

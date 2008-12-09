@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ LANGUAGE_CODE }}" xml:lang="{{ LANGUAGE_CODE }}">
+<head>
+	<title>REST Services for GAE Image Processing</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+	
+	{% block extrastyle %}{% endblock %}
+	{% block extrahead %}{% endblock %}
+	{% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
+</head>
+
+<body>
+	<!-- Container -->
+	<div id="container">
+	    <!-- Header -->
+		<div id="header">
+			 <div id="branding">
+					{% block branding %}<h1>Welcome</h1>{% endblock %}
+			</div>
+			<div id="user-tools">
+				<a href="/">home</a> | <a href="/about">about</a>
+			</div>
+		</div>
+		<!-- END Header -->
+		<!-- Content -->
+		<div id="content">
+			{% block content %}{% endblock %}
+			<br class="clear" />
+		</div>
+		<!-- END Content -->
+
+		{% block footer %}
+			<div id="footer">
+				<a href="http://www.danworth.com">About Me</a> | Contact Me <b>(djworth [at] gmail)</b>
+			</div>
+		{% endblock %}
+	</div>
+	<!-- END Container -->
+</body>
+</html>

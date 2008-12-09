@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="resize" enctype="multipart/form-data" method="post">
+	<table>
+		<tr>
+			<td>File</td>
+			<td><input type="file" name="file" /></td>
+		</tr>
+		<tr>
+			<td>Width</td>
+			<td><input type="text" name="width" /></td>
+		</tr>
+		<tr>
+			<td>Height</td>
+			<td><input type="text" name="height" /></td>
+		</tr>
+		<tr>
+			<td>Return As Json</td>
+			<td><input type="checkbox" name="json" value="True" /></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="submit" /> or <a href="/">Cancel</a>
+			</td>
+		</tr>
+	</table>
+{% endblock %}

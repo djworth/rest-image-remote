@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="crop" enctype="multipart/form-data" method="post">
+	<table>
+		<tr>
+			<td>File</td>
+			<td><input type="file" name="file" /></td>
+		</tr>
+		<tr>
+			<td>Left X</td>
+			<td><input type="text" name="left_x" /></td>
+		</tr>
+		<tr>
+			<td>Top Y</td>
+			<td><input type="text" name="top_y" /></td>
+		</tr>
+		<tr>
+			<td>Right X</td>
+			<td><input type="text" name="right_x" /></td>
+		</tr>
+		<tr>
+			<td>Bottom Y</td>
+			<td><input type="text" name="bottom_y" /></td>
+		</tr>
+		<tr>
+			<td>Return As Json</td>
+			<td><input type="checkbox" name="json" value="True" /></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<input type="submit" /> or <a href="/">Cancel</a>
+			</td>
+		</tr>
+	</table>
+{% endblock %}
