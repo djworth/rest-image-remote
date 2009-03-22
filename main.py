@@ -119,15 +119,18 @@ class ResizeHandler(BaseHandler):
         resized = img.execute_transforms()
         self.render(image=resized, data={'height':height, 'width':width})
 
+mapping = {'/': MainHandler,
+           '/about': AboutHandler,
+           '/resize': ResizeHandler,
+           '/crop': CropHandler,
+           '/rotate': RotateHandler,
+           '/horizontal': HorizontalFlipHandler,
+           '/lucky': ImFeelingLuckyHandler,
+          }
+
 urls = []
-urls.append(('/', MainHandler))
-urls.append(('/about', AboutHandler))
-urls.append(('/resize', ResizeHandler))
-urls.append(('/crop', CropHandler))
-urls.append(('/rotate', RotateHandler))
-urls.append(('/horizontal', HorizontalFlipHandler))
-urls.append(('/vertical', VerticalFlipHandler))
-urls.append(('/lucky', ImFeelingLuckyHandler))
+for url, handler in mapping.items():
+  urls.append((url, handler))
 
 application = webapp.WSGIApplication(urls, debug=True)
 
